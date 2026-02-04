@@ -23,10 +23,20 @@ const { chromium } = require('playwright');
   const match = text.match(/\d+/);
   const zahl = match ? match[0] : 'unbekannt';
 
-  const message = `🏃‍♂️ **Marsch mit Aussicht 2026**
-📊 Status: ${text.trim()}
-🔢 Zahl: **${zahl}**
-⏰ ${new Date().toLocaleString('de-DE')}`;
+  const message = `💥 **MARSCH MIT AUSSICHT 2026** 💥
+Bruder hör zu:
+
+📊 Lagebericht:
+${text.trim()}
+
+🔢 Noch **${zahl} Plätze** am Start
+
+🚬 Keine Panik, kein Stress,
+Bot war da, Zahlen gecheckt.
+
+⏰ ${new Date().toLocaleString('de-DE')}
+💸 Scrape läuft täglich, so wie ich.`;
+
 
   await fetch(webhook, {
     method: 'POST',
