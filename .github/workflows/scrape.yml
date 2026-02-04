@@ -24,3 +24,5 @@ jobs:
 
       - name: Run scraper
         run: node scrape.js
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
